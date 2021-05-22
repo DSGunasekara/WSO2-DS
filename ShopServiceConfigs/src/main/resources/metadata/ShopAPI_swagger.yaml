@@ -72,8 +72,3 @@ paths:
       responses:
         default:
           description: Default response
-  /order:
-    get:
-      responses:
-        default:
-          description: Default response

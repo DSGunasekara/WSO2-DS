@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<api context="/shop" name="ShopAPI" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="GET" uri-template="/product">
+<api context="/order" name="OrderAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
         <inSequence>
             <send>
-                <endpoint key="getProducts"/>
+                <endpoint key="getOrders"/>
             </send>
         </inSequence>
         <outSequence>
@@ -11,10 +11,10 @@
         </outSequence>
         <faultSequence/>
     </resource>
-    <resource methods="GET" uri-template="/product/{item}">
+    <resource methods="GET" uri-template="/{order}">
         <inSequence>
             <send>
-                <endpoint key="getProduct"/>
+                <endpoint key="getOrder"/>
             </send>
         </inSequence>
         <outSequence>
@@ -22,10 +22,10 @@
         </outSequence>
         <faultSequence/>
     </resource>
-    <resource methods="POST" uri-template="/product">
+    <resource methods="POST" uri-template="/">
         <inSequence>
             <send>
-                <endpoint key="createProduct"/>
+                <endpoint key="createOrder"/>
             </send>
         </inSequence>
         <outSequence>
@@ -33,10 +33,10 @@
         </outSequence>
         <faultSequence/>
     </resource>
-    <resource methods="PATCH" uri-template="/product/{item}">
+    <resource methods="PATCH" uri-template="/{order}">
         <inSequence>
             <send>
-                <endpoint key="updateProduct"/>
+                <endpoint key="updateOrder"/>
             </send>
         </inSequence>
         <outSequence>
@@ -44,10 +44,10 @@
         </outSequence>
         <faultSequence/>
     </resource>
-    <resource methods="DELETE" uri-template="/product/{item}">
+    <resource methods="DELETE" uri-template="/{order}">
         <inSequence>
             <send>
-                <endpoint key="deleteProduct"/>
+                <endpoint key="deleteOrder"/>
             </send>
         </inSequence>
         <outSequence>

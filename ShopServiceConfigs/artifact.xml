@@ -56,4 +56,55 @@
     <artifact name="getUser" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/getUser.xml</file>
     </artifact>
+    <artifact name="resetPassword" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/resetPassword.xml</file>
+    </artifact>
+    <artifact name="CartAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/CartAPI.xml</file>
+    </artifact>
+    <artifact name="CartAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CartAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="CartAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/CartAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="getCartItems" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getCartItems.xml</file>
+    </artifact>
+    <artifact name="getCartItem" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getCartItem.xml</file>
+    </artifact>
+    <artifact name="getUserItems" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getUserItems.xml</file>
+    </artifact>
+    <artifact name="createCartItem" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/createCartItem.xml</file>
+    </artifact>
+    <artifact name="UpdateCartItem" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/UpdateCartItem.xml</file>
+    </artifact>
+    <artifact name="deleteCartItem" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/deleteCartItem.xml</file>
+    </artifact>
+    <artifact name="OrderAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/OrderAPI.xml</file>
+    </artifact>
+    <artifact name="OrderAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/OrderAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="OrderAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/OrderAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="getOrder" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/getOrder.xml</file>
+    </artifact>
+    <artifact name="createOrder" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/createOrder.xml</file>
+    </artifact>
+    <artifact name="updateOrder" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/updateOrder.xml</file>
+    </artifact>
+    <artifact name="deleteOrder" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/deleteOrder.xml</file>
+    </artifact>
 </artifacts>

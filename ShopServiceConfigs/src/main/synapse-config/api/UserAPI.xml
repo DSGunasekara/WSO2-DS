@@ -66,4 +66,15 @@
         </outSequence>
         <faultSequence/>
     </resource>
+    <resource methods="PATCH" uri-template="/resetPassword/{user}">
+        <inSequence>
+            <send>
+                <endpoint key="resetPassword"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
 </api>

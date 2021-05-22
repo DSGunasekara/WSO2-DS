@@ -1,26 +1,11 @@
 openapi: 3.0.1
 info:
-  title: UserAPI
-  description: API Definition of UserAPI
+  title: OrderAPI
+  description: API Definition of OrderAPI
   version: 1.0.0
 servers:
-- url: http://localhost:8290/user
+- url: http://localhost:8290/order
 paths:
-  /login:
-    post:
-      requestBody:
-        description: Sample Payload
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                payload:
-                  type: object
-        required: false
-      responses:
-        default:
-          description: Default response
   /:
     get:
       responses:
@@ -40,14 +25,12 @@ paths:
       responses:
         default:
           description: Default response
-  /{user}:
+  /{order}:
     get:
       parameters:
-      - name: user
+      - name: order
         in: path
         required: true
-        style: simple
-        explode: false
         schema:
           type: string
       responses:
@@ -55,11 +38,9 @@ paths:
           description: Default response
     delete:
       parameters:
-      - name: user
+      - name: order
         in: path
         required: true
-        style: simple
-        explode: false
         schema:
           type: string
       responses:
@@ -67,34 +48,9 @@ paths:
           description: Default response
     patch:
       parameters:
-      - name: user
+      - name: order
         in: path
         required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      requestBody:
-        description: Sample Payload
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                payload:
-                  type: object
-        required: false
-      responses:
-        default:
-          description: Default response
-  /resetPassword/{user}:
-    patch:
-      parameters:
-      - name: user
-        in: path
-        required: true
-        style: simple
-        explode: false
         schema:
           type: string
       requestBody:

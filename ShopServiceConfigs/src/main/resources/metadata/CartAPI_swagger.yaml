@@ -1,26 +1,11 @@
 openapi: 3.0.1
 info:
-  title: UserAPI
-  description: API Definition of UserAPI
+  title: CartAPI
+  description: API Definition of CartAPI
   version: 1.0.0
 servers:
-- url: http://localhost:8290/user
+- url: http://localhost:8290/cart
 paths:
-  /login:
-    post:
-      requestBody:
-        description: Sample Payload
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                payload:
-                  type: object
-        required: false
-      responses:
-        default:
-          description: Default response
   /:
     get:
       responses:
@@ -40,26 +25,34 @@ paths:
       responses:
         default:
           description: Default response
-  /{user}:
+  /{item}:
+    get:
+      parameters:
+      - name: item
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /user/{user}:
     get:
       parameters:
       - name: user
         in: path
         required: true
-        style: simple
-        explode: false
         schema:
           type: string
       responses:
         default:
           description: Default response
+  /{id}:
     delete:
       parameters:
-      - name: user
+      - name: id
         in: path
         required: true
-        style: simple
-        explode: false
         schema:
           type: string
       responses:
@@ -67,34 +60,9 @@ paths:
           description: Default response
     patch:
       parameters:
-      - name: user
+      - name: id
         in: path
         required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-      requestBody:
-        description: Sample Payload
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                payload:
-                  type: object
-        required: false
-      responses:
-        default:
-          description: Default response
-  /resetPassword/{user}:
-    patch:
-      parameters:
-      - name: user
-        in: path
-        required: true
-        style: simple
-        explode: false
         schema:
           type: string
       requestBody:
