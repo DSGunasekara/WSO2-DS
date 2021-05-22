@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/shop" name="ShopAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/users">
+        <inSequence>
+            <log>
+                <property name="message" value="hello"/>
+            </log>
+            <send>
+                <endpoint key="shopEP"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/product">
+        <inSequence>
+            <send>
+                <endpoint key="getProducts"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/product/{item}">
+        <inSequence>
+            <send>
+                <endpoint key="getProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/order">
+        <inSequence>
+            <send>
+                <endpoint key="getOrders"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/product">
+        <inSequence>
+            <send>
+                <endpoint key="createProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="PATCH" uri-template="/product/{item}">
+        <inSequence>
+            <send>
+                <endpoint key="updateProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/product/{item}">
+        <inSequence>
+            <send>
+                <endpoint key="deleteProduct"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
