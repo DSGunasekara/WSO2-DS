@@ -14,17 +14,26 @@
   <name>ShopServiceCompositeExporter</name>
   <description>ShopServiceCompositeExporter</description>
   <properties>
-    <com.example.endpoint_._createProduct>capp/EnterpriseServiceBus</com.example.endpoint_._createProduct>
-    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
-    <com.example.endpoint_._getOrders>capp/EnterpriseServiceBus</com.example.endpoint_._getOrders>
-    <com.example.endpoint_._getProducts>capp/EnterpriseServiceBus</com.example.endpoint_._getProducts>
-    <com.example.metadata_._ShopAPI_swagger>capp/EnterpriseServiceBus</com.example.metadata_._ShopAPI_swagger>
-    <com.example.metadata_._ShopAPI_metadata>capp/EnterpriseServiceBus</com.example.metadata_._ShopAPI_metadata>
-    <com.example.endpoint_._getProduct>capp/EnterpriseServiceBus</com.example.endpoint_._getProduct>
-    <com.example.api_._ShopAPI>capp/EnterpriseServiceBus</com.example.api_._ShopAPI>
-    <com.example.endpoint_._updateProduct>capp/EnterpriseServiceBus</com.example.endpoint_._updateProduct>
-    <com.example.endpoint_._shopEP>capp/EnterpriseServiceBus</com.example.endpoint_._shopEP>
     <com.example.endpoint_._deleteProduct>capp/EnterpriseServiceBus</com.example.endpoint_._deleteProduct>
+    <com.example.endpoint_._createProduct>capp/EnterpriseServiceBus</com.example.endpoint_._createProduct>
+    <com.example.endpoint_._deleteUser>capp/EnterpriseServiceBus</com.example.endpoint_._deleteUser>
+    <com.example.endpoint_._getOrders>capp/EnterpriseServiceBus</com.example.endpoint_._getOrders>
+    <com.example.endpoint_._getUsers>capp/EnterpriseServiceBus</com.example.endpoint_._getUsers>
+    <com.example.endpoint_._getProduct>capp/EnterpriseServiceBus</com.example.endpoint_._getProduct>
+    <com.example.metadata_._ShopAPI_swagger>capp/EnterpriseServiceBus</com.example.metadata_._ShopAPI_swagger>
+    <com.example.metadata_._UserAPI_metadata>capp/EnterpriseServiceBus</com.example.metadata_._UserAPI_metadata>
+    <com.example.metadata_._UserAPI_swagger>capp/EnterpriseServiceBus</com.example.metadata_._UserAPI_swagger>
+    <com.example.endpoint_._shopEP>capp/EnterpriseServiceBus</com.example.endpoint_._shopEP>
+    <com.example.endpoint_._getUser>capp/EnterpriseServiceBus</com.example.endpoint_._getUser>
+    <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <com.example.api_._UserAPI>capp/EnterpriseServiceBus</com.example.api_._UserAPI>
+    <com.example.endpoint_._updateUser>capp/EnterpriseServiceBus</com.example.endpoint_._updateUser>
+    <com.example.endpoint_._login>capp/EnterpriseServiceBus</com.example.endpoint_._login>
+    <com.example.metadata_._ShopAPI_metadata>capp/EnterpriseServiceBus</com.example.metadata_._ShopAPI_metadata>
+    <com.example.api_._ShopAPI>capp/EnterpriseServiceBus</com.example.api_._ShopAPI>
+    <com.example.endpoint_._createUser>capp/EnterpriseServiceBus</com.example.endpoint_._createUser>
+    <com.example.endpoint_._updateProduct>capp/EnterpriseServiceBus</com.example.endpoint_._updateProduct>
+    <com.example.endpoint_._getProducts>capp/EnterpriseServiceBus</com.example.endpoint_._getProducts>
   </properties>
   <dependencies>
     <dependency>
@@ -46,6 +55,24 @@
       <type>xml</type>
     </dependency>
     <dependency>
+      <groupId>com.example.metadata</groupId>
+      <artifactId>UserAPI_metadata</artifactId>
+      <version>1.0.0</version>
+      <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.metadata</groupId>
+      <artifactId>UserAPI_swagger</artifactId>
+      <version>1.0.0</version>
+      <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.api</groupId>
+      <artifactId>UserAPI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
       <groupId>com.example.endpoint</groupId>
       <artifactId>createProduct</artifactId>
       <version>1.0.0</version>
@@ -53,7 +80,19 @@
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
+      <artifactId>createUser</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
       <artifactId>deleteProduct</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>deleteUser</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -77,13 +116,37 @@
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
-      <artifactId>shopEP</artifactId>
+      <artifactId>getUsers</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
       <artifactId>updateProduct</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>updateUser</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>shopEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>login</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>getUser</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
